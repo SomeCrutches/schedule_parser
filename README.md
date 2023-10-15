@@ -1,1 +1,1 @@
-# dev_ops_learn news
+# dev_ops_learn news_deleted
