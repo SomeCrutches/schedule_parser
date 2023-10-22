@@ -37,7 +37,7 @@ class CustomApp:
         self.entry_label = tk.Label(master, text="Имя преподавателя:", font=("Times New Roman", 12))
         self.entry_label.grid(row=1, column=0, padx=5, pady=5)
 
-        self.default_text = "Дедюхина А.А."
+        self.default_text = "Дедюхина А"
 
         self.entry = tk.Entry(master, font=("Times New Roman", 12))
         self.entry.insert(0, self.default_text)
@@ -103,7 +103,7 @@ class CustomApp:
         self.text_area.delete(1.0, tk.END)
         teacher_name = self.entry.get()
         if teacher_name == self.default_text:
-            teacher_name = 'Дедюхина А.А.'
+            teacher_name = 'Дедюхина А'
         folder_path = 'Tables'
         parser = ScheduleParser(folder_path)
         parser.parse_schedule()
