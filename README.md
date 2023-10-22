@@ -1,1 +1,1 @@
-# dev_ops_learn news_deleted
+main.py fro GUI
