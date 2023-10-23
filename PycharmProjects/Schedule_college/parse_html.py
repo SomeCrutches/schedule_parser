@@ -61,6 +61,7 @@ class Parser:
         self.driver.quit()
         return links
 
+
 if __name__ == "__main__":
     first_links = Parser()
     first_links.parse_html()

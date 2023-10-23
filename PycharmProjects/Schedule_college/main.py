@@ -109,13 +109,17 @@ class CustomApp:
         parser.parse_schedule()
         teacher_pairs = parser.get_schedule()
 
+        day_of_week = 'понедельник'
         for teacher, pairs in teacher_pairs.items():
             if teacher_name in teacher:
                 for pair in pairs:
-                    self.text_area.insert(tk.END, f"День недели: {pair[0]}, Номер пары: {pair[1]}, Аудитория: {pair[2]}, Предмет: {pair[3]}, Группа: {pair[4]}\n")
-
-
-
+                    day_of_week_next = pair[0].strip().lower()
+                    if day_of_week_next != day_of_week:
+                        self.text_area.insert(tk.END,
+                                              "___________________________________________________________________\n")
+                        day_of_week = day_of_week_next
+                    self.text_area.insert(tk.END,
+                                          f"День недели: {pair[0]}, Номер пары: {pair[1]}, Аудитория: {pair[2]}, Предмет: {pair[3]}, Группа: {pair[4]}\n")
 
     def toggle_fullscreen(self, event=None):
         self.master.attributes('-fullscreen', not self.master.attributes('-fullscreen'))
