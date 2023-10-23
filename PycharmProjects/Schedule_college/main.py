@@ -2,6 +2,7 @@ import tkinter as tk
 from parse_html import Parser
 from parse_xl import ScheduleParser
 import time
+import os
 
 
 class RoundedButton(tk.Canvas):
@@ -126,6 +127,8 @@ class CustomApp:
 
     def quit_fullscreen(self, event=None):
         self.master.attributes('-fullscreen', False)
+
+
 
 
 root = tk.Tk()
